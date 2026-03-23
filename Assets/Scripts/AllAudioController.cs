@@ -1,13 +1,11 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioPanel : MonoBehaviour
+public class AllAudioController : MonoBehaviour
 {
     [SerializeField] private AudioMixerGroup _mixer;
 
     private const string MasterVolume = "MasterVolume";
-    private const string ButtonsVolume = "ButtonsVolume";
-    private const string BackgroundVolume = "BackgroundVolume";
 
     private float _minVolume = 0.001f;
 
@@ -22,16 +20,6 @@ public class AudioPanel : MonoBehaviour
     public void ChangeAllVolume(float volume)
     {
         _mixer.audioMixer.SetFloat(MasterVolume, ValueToVolume(volume));
-    }
-
-    public void ChangeButtonsVolume(float volume)
-    {
-        _mixer.audioMixer.SetFloat(ButtonsVolume, ValueToVolume(volume));
-    }
-
-    public void ChangeBackgroundVolume(float volume)
-    {
-        _mixer.audioMixer.SetFloat(BackgroundVolume, ValueToVolume(volume));
     }
 
     private float ValueToVolume(float value)

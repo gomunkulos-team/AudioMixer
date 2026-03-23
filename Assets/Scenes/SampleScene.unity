@@ -1851,6 +1851,8 @@ GameObject:
   - component: {fileID: 1232753897}
   - component: {fileID: 1232753896}
   - component: {fileID: 1232753900}
+  - component: {fileID: 1232753902}
+  - component: {fileID: 1232753901}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1963,6 +1965,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ed907c06ff5b0458d541693493a828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioPanel
+  _mixer: {fileID: 24300002, guid: 174020f0f185dbc4092fc9297351adde, type: 2}
+--- !u!114 &1232753901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232753895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac4cc987c0b64b41abb5b98d16fbccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAudio
+  _mixer: {fileID: 24300002, guid: 174020f0f185dbc4092fc9297351adde, type: 2}
+--- !u!114 &1232753902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232753895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7bc1b19dcc1af44b0c0da4a6a26a42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgoundAudio
   _mixer: {fileID: 24300002, guid: 174020f0f185dbc4092fc9297351adde, type: 2}
 --- !u!1 &1285413866
 GameObject:
@@ -3133,8 +3161,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1232753900}
-        m_TargetAssemblyTypeName: AudioPanel, Assembly-CSharp
+      - m_Target: {fileID: 1232753902}
+        m_TargetAssemblyTypeName: BackgoundAudio, Assembly-CSharp
         m_MethodName: ChangeBackgroundVolume
         m_Mode: 0
         m_Arguments:
@@ -3699,8 +3727,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1232753900}
-        m_TargetAssemblyTypeName: AudioPanel, Assembly-CSharp
+      - m_Target: {fileID: 1232753901}
+        m_TargetAssemblyTypeName: ButtonAudio, Assembly-CSharp
         m_MethodName: ChangeButtonsVolume
         m_Mode: 0
         m_Arguments:
