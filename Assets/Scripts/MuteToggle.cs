@@ -23,6 +23,11 @@ public class MuteToggle : MonoBehaviour
         _toggle.onValueChanged.AddListener(ToggleAllSound);
     }
 
+    private void OnDisable()
+    {
+        _toggle.onValueChanged.RemoveListener(ToggleAllSound);
+    }
+
     private void ToggleAllSound(bool enabled)
     {
         if (enabled)

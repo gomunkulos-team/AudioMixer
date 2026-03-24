@@ -16,7 +16,16 @@ public class SliderForAudio : MonoBehaviour
     private void Awake()
     {
         _slider = GetComponent<Slider>();
+    }
+
+    private void OnEnable()
+    {
         _slider.onValueChanged.AddListener(ChangeButtonsVolume);
+    }
+
+    private void OnDisable()
+    {
+        _slider.onValueChanged.RemoveListener(ChangeButtonsVolume);
     }
 
     private void ChangeButtonsVolume(float volume)
